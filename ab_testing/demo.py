@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 from scipy.stats import beta
 
 def plot(a, b, trial, ctr):
+  # x is the likelihood and y is the prior
+  # x is assumed to be Bernoulli (as the Click through Rates are) y is beta being it's conjugate prior
   x = np.linspace(0, 1, 200)
   y = beta.pdf(x, a, b)
   mean = float(a) / (a + b)
